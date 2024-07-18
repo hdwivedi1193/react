@@ -9,7 +9,7 @@ function Aboutus() {
 
     const handleToggle=()=>{
         setStyle({
-            color:"red",
+            color:"black",
             backgroundcolor:"black"
         })
     }
