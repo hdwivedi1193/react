@@ -4,14 +4,11 @@ Welcome to our React.js beginner's guide! This project aims to provide a simple 
 
 ## Table of Contents
 
-1. [Getting Started](#getting-started)
 2. [Routing](#routing)
 3. [State Management](#state-management)
 4. [Props](#props)
 5. [Hooks](#hooks)
 6. [Dark Theme](#dark-theme)
-7. [About Us App](#about-us-app)
-8. [Contributing](#contributing)
 
 ## Getting Started
 
