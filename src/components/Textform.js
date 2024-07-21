@@ -2,30 +2,19 @@ import React from 'react'
 import { useState } from 'react';
 
 export default function Textform(props) {
-    const [text, setText] = useState("Enter your text here");
 
-    const handleOnChange=(e)=>{
-        setText(e.target.value)
-    }
-    const handleOnClick=(e)=>{
-        setText(text.toUpperCase())
-    }
-
-    const handleOnClear=()=>{
-        setText("");
-    }
     return (
-        <div>
-            <div className="container">
-                <div className="mb-3">
-                    <label htmlFor="exampleFormControlTextarea1" className="form-label">{props.heading}</label>
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={text} onChange={handleOnChange}></textarea>
-                </div>
-                <button type="button" className="btn btn-primary" onClick={handleOnClick}>Click to change uppercase</button> &nbsp;
-                <button type="button" className="btn btn-primary" onClick={handleOnClear}>Click to clear</button>
- 
+        <div className="container" style={props.formStyle}>
+            <div className="mb-3">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label">{props.title}</label>
+                <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={props.text} onChange={props.handleUserInput}></textarea>
+
             </div>
-            <span>Character count is {text.length} and Words count is {text.split(" ").length}</span>
+            <div className="md-9">
+                <button type="button" className="btn btn-primary" style={props.buttonStyle} onClick={props.handleUpperCase} >UPPERCASE</button>
+                <button type="button" className="btn btn-secondary" style={props.buttonStyle} onClick={props.handleLowerCase}>LOWERCASE</button>
+                <button type="button" className="btn btn-success" style={props.buttonStyle} onClick={props.handleCopy}>COPY</button>
+            </div>
         </div>
     )
 }
