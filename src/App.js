@@ -83,7 +83,7 @@ function App() {
           <Route exact path="/about" element={<Aboutus myStyle={style}></Aboutus>}>
 
           </Route>
-          <Route exact path="/home" element={<Textform title="Add Text to analyze result" buttonStyle={buttonStyle} handleUpperCase={handleUpperCase} handleLowerCase={handleLowerCase} handleCopy={handleCopy} text={text} handleUserInput={handleUserInput} formStyle={formStyle}></Textform>}>
+          <Route exact path="/" element={<Textform title="Add Text to analyze result" buttonStyle={buttonStyle} handleUpperCase={handleUpperCase} handleLowerCase={handleLowerCase} handleCopy={handleCopy} text={text} handleUserInput={handleUserInput} formStyle={formStyle}></Textform>}>
           </Route>
         </Routes>
       </BrowserRouter>
